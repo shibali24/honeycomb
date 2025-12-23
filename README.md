@@ -7,23 +7,6 @@
 - **Final paper:** [final_paper.pdf](final_paper.pdf)  
 - **Presentation slides:** [honeycomb_pres_slides.pdf](honeycomb_pres_slides.pdf)
 
-> GitHub usually renders PDFs directly in the browser when you click them.
-
-<details>
-<summary><strong>Inline view (may not render on all GitHub pages)</strong></summary>
-
-### Final Paper
-<object data="final_paper.pdf" type="application/pdf" width="100%" height="800px">
-  <p>Your browser/GitHub view can’t embed PDFs here. Open: <a href="final_paper.pdf">final_paper.pdf</a></p>
-</object>
-
-### Slides
-<object data="honeycomb_pres_slides.pdf" type="application/pdf" width="100%" height="800px">
-  <p>Your browser/GitHub view can’t embed PDFs here. Open: <a href="honeycomb_pres_slides.pdf">honeycomb_pres_slides.pdf</a></p>
-</object>
-
-</details>
-
 ---
 
 ## Key Ideas
@@ -96,7 +79,7 @@ python3 node.py 40.192.121.231 8519 15.161.241.238 8519
 
 ### Notes
 
-<THIS_NODE_IP> should be the address other nodes can reach (often the public EC2 IP if you’re across machines/regions).
+<THIS_NODE_IP> should be the address other nodes can reach 
 
 <BOOTSTRAP_NODE_IP>:<BOOTSTRAP_PORT> can be any node already running in the ring (not necessarily the first).
 
