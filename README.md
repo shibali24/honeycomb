@@ -1,6 +1,6 @@
-# HONEYCOMB
+# honeycomb
 
-**Honeycomb** is a lightweight, decentralized peer-to-peer (P2P) communication platform designed for disaster situations where traditional infrastructure is unreliable, congested, or down. Instead of relying on a central server, Honeycomb runs as a self-healing overlay network where every participant is both a client and a relay, enabling short text broadcasts to propagate even under churn and node failures.
+**honeycomb** is a lightweight, decentralized peer-to-peer (P2P) communication platform designed for disaster situations where traditional infrastructure is unreliable, congested, or down. Instead of relying on a central server, Honeycomb runs as a self-healing overlay network where every participant is both a client and a relay, enabling short text broadcasts to propagate even under churn and node failures.
 
 ## Docs (PDF)
 
@@ -18,7 +18,7 @@ Nodes form a logical ring using consistent hashing (SHA-1 of IP:port mapped into
 - **Finger** (a long-range contact used to speed routing/placement without a full finger table)
 
 ### Fault-tolerant broadcast
-Honeycomb focuses on **broadcast dissemination** (not a full DHT). Messages are forwarded along redundant paths:
+honeycomb focuses on **broadcast dissemination** (not a full DHT). Messages are forwarded along redundant paths:
 - Deterministic forwarding to key neighbors (e.g., first successor + finger)
 - Probabilistic forwarding to additional successors with decreasing probability to increase robustness under failures while limiting traffic
 - **Deduplication** via a message ID set so the network doesn’t explode with repeats
@@ -42,9 +42,9 @@ Each node runs a multi-threaded XML-RPC server plus background maintenance threa
 
 ---
 
-## Running Honeycomb (create + join)
+## Running honeycomb (create + join)
 
-Honeycomb uses a simple bootstrap workflow:
+honeycomb uses a simple bootstrap workflow:
 
 - **One node creates the ring** (no join target)
 - **Any other node joins** by providing the IP:port of a node already in the ring
@@ -91,7 +91,7 @@ python3 node.py 40.192.121.231 8519 15.161.241.238 8519
 - Broadcast: messages propagate across the ring through redundant forwarding + deduplication.
 
 ### Experiments
-Honeycomb includes experiments that evaluate behavior under failures and load, including:
+honeycomb includes experiments that evaluate behavior under failures and load, including:
 
 - Network recovery under node failures: convergence time as failures increase
 - Delivery reliability under traffic + concurrent node failures: message delivery fraction/accuracy under progressive node loss
